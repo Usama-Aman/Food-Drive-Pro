@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appGreyColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_30sdp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gstart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".9" />
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:onClick="goBackFromOtp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_back" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvFPNext"
+            style="@style/btn_green"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:onClick="goToResetPassword"
+            android:text="@string/fpBtnNext"
+            app:layout_constraintBottom_toBottomOf="@id/back"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/back" />
+
+
+        <ImageView
+            android:id="@+id/ivFP"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_otp_image"
+            app:layout_constraintLeft_toLeftOf="@id/gstart"
+            app:layout_constraintRight_toRightOf="@id/gend"
+            app:layout_constraintTop_toBottomOf="@id/tvFPNext" />
+
+
+        <TextView
+            android:id="@+id/tvFPLabel1"
+            style="@style/big_size_black_labels"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:text="@string/otpLabelCheckEmail"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="@id/gstart"
+            app:layout_constraintRight_toRightOf="@id/gend"
+            app:layout_constraintTop_toBottomOf="@id/ivFP" />
+
+        <TextView
+            android:id="@+id/tvFPLabel2"
+            style="@style/normal_black_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:text="@string/otpLabelEmailInstructions"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="@id/gstart"
+            app:layout_constraintRight_toRightOf="@id/gend"
+            app:layout_constraintTop_toBottomOf="@id/tvFPLabel1" />
+
+
+        <com.elementary.thefooddrivepro.utils.PinEntryEditText
+            android:id="@+id/txtPinEntry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_36sdp"
+            android:cursorVisible="false"
+            android:digits="1234567890"
+            android:inputType="numberPassword"
+            android:layoutDirection="ltr"
+            android:maxLength="4"
+            android:textColor="@color/charcoal_light"
+            android:textIsSelectable="false"
+            android:textSize="20sp"
+            app:layout_constraintLeft_toLeftOf="@id/gstart"
+            app:layout_constraintRight_toRightOf="@id/gend"
+            app:layout_constraintTop_toBottomOf="@id/tvFPLabel2"
+            app:pinAnimationType="popIn"
+            app:pinBackgroundIsSquare="false"
+            app:pinCharacterSpacing="@dimen/_30sdp"
+            app:pinLineColors="@color/otp_line_colors"
+            app:pinLineStroke="2dp"
+            app:pinLineStrokeSelected="1dp"
+            app:pinTextBottomPadding="@dimen/_2sdp" />
+
+
+        <TextView
+            android:id="@+id/pinViewError"
+            style="@style/input_field_label_error"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:text="@string/otpLabelOtpRequired"
+            android:visibility="invisible"
+            app:layout_constraintLeft_toLeftOf="@id/gstart"
+            app:layout_constraintRight_toRightOf="@id/gend"
+            app:layout_constraintTop_toBottomOf="@id/txtPinEntry" />
+
+
+        <TextView
+            android:id="@+id/tvFPLabel3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/otpLabelDidntReceiveCode"
+            android:textAlignment="center"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="@id/gstart"
+            app:layout_constraintRight_toRightOf="@id/gend"
+            app:layout_constraintTop_toBottomOf="@id/pinViewError" />
+
+
+        <TextView
+            android:id="@+id/btnResendEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:drawableEnd="@drawable/ic_resend"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="@string/otpLabelResendEmail"
+            android:textAlignment="center"
+            android:textColor="@color/appGreenColor"
+            android:textSize="@dimen/_11sdp"
+            app:layout_constraintLeft_toLeftOf="@id/gstart"
+            app:layout_constraintRight_toRightOf="@id/gend"
+            app:layout_constraintTop_toBottomOf="@id/tvFPLabel3" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

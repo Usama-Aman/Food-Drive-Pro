@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mainConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whiteColor">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/dividerColor"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/imageConstraint"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/edit_profile_image_background"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view">
+
+                <ImageView
+                    android:id="@+id/editProfileImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_1sdp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_place_holder" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <View
+                android:id="@+id/v"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="@id/imageConstraint"
+                app:layout_constraintRight_toRightOf="@id/imageConstraint" />
+
+            <ImageView
+                android:id="@+id/cameraIcon"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_camera"
+                app:layout_constraintBottom_toBottomOf="@id/v"
+                app:layout_constraintLeft_toLeftOf="@id/v"
+                app:layout_constraintRight_toRightOf="@id/v"
+                app:layout_constraintTop_toBottomOf="@id/v" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gstart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gmid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".5" />
+
+            <TextView
+                android:id="@+id/firstNameLabel"
+                style="@style/input_field_label_normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="@string/profileLabelFirstName"
+                app:layout_constraintLeft_toLeftOf="@id/gstart"
+                app:layout_constraintRight_toRightOf="@id/gmid"
+                app:layout_constraintTop_toBottomOf="@id/cameraIcon" />
+
+            <EditText
+                android:id="@+id/etFirstName"
+                style="@style/input_field_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:background="@drawable/white_text_field_drawable"
+                android:hint="@string/profileHintFirstName"
+                android:inputType="text"
+                android:nextFocusDown="@id/etLastName"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                app:layout_constraintLeft_toLeftOf="@id/gstart"
+                app:layout_constraintRight_toRightOf="@id/gmid"
+                app:layout_constraintTop_toBottomOf="@id/firstNameLabel" />
+
+
+            <TextView
+                android:id="@+id/etFirstNameError"
+                style="@style/input_field_label_error"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:text="@string/profileErrorFirstName"
+                android:visibility="invisible"
+                app:layout_constraintLeft_toLeftOf="@id/gstart"
+                app:layout_constraintRight_toRightOf="@id/gmid"
+                app:layout_constraintTop_toBottomOf="@id/etFirstName" />
+
+            <TextView
+                android:id="@+id/lastNameLabel"
+                style="@style/input_field_label_normal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/profileLabelLastName"
+                app:layout_constraintLeft_toLeftOf="@id/gmid"
+                app:layout_constraintRight_toRightOf="@id/gend"
+                app:layout_constraintTop_toBottomOf="@id/cameraIcon" />
+
+            <EditText
+                android:id="@+id/etLastName"
+                style="@style/input_field_edit_text"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:background="@drawable/white_text_field_drawable"
+                android:hint="@string/profileHintLastName"
+                android:inputType="text"
+                android:nextFocusDown="@id/etPhone"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                app:layout_constraintLeft_toLeftOf="@id/gmid"
+                app:layout_constraintRight_toRightOf="@id/gend"
+                app:layout_constraintTop_toBottomOf="@id/lastNameLabel" />
+
+
+            <TextView
+                android:id="@+id/etLastNameError"
+                style="@style/input_field_label_error"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:text="@string/profileErrorLastName"
+                android:visibility="invisible"
+                app:layout_constraintLeft_toLeftOf="@id/gmid"
+                app:layout_constraintRight_toRightOf="@id/gend"
+                app:layout_constraintTop_toBottomOf="@id/etLastName" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="@id/gstart"
+                app:layout_constraintRight_toRightOf="@id/gend"
+                app:layout_constraintTop_toBottomOf="@id/etLastNameError">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/input_field_label_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileLabelPhone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:background="@drawable/white_text_field_drawable"
+                        android:layout_height="@dimen/_35sdp"
+                        android:orientation="horizontal">
+
+                        <com.hbb20.CountryCodePicker
+                            android:id="@+id/mobileCodePicker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            app:ccpDialog_keyboardAutoPopup="false"
+                            app:ccp_defaultNameCode="PK"
+                            app:ccp_showNameCode="false" />
+
+
+                        <EditText
+                            android:id="@+id/etPhone"
+                            style="@style/input_field_edit_text"
+                            android:layout_width="0dp"
+                            android:background="@color/transparent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:maxLength="10"
+                            android:hint="@string/profileHintPhone"
+                            android:inputType="phone"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_5sdp" />
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/etPhoneError"
+                        style="@style/input_field_label_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileErrorPhone"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/input_field_label_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileLabelEmail" />
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        style="@style/input_field_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/white_text_field_drawable"
+                        android:hint="@string/profileHintEmail"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp" />
+
+
+                    <TextView
+                        android:id="@+id/etEmailError"
+                        style="@style/input_field_label_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileErrorEmail"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/big_size_black_labels"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:text="@string/profileLabelChangePassword"
+                    android:textSize="@dimen/_12sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/input_field_label_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileLabelOldPassword" />
+
+                    <EditText
+                        android:id="@+id/etOldPassword"
+                        style="@style/input_field_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/white_text_field_drawable"
+                        android:hint="@string/profileHintOldPassword"
+                        android:inputType="textPassword"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp" />
+
+
+                    <TextView
+                        android:id="@+id/etOldPasswordError"
+                        style="@style/input_field_label_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileErrorOldPassword"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/input_field_label_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileLabelNewPassword" />
+
+                    <EditText
+                        android:id="@+id/etNewPassword"
+                        style="@style/input_field_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/white_text_field_drawable"
+                        android:hint="@string/profileHintNewPassword"
+                        android:inputType="textPassword"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp" />
+
+
+                    <TextView
+                        android:id="@+id/etNewPasswordError"
+                        style="@style/input_field_label_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileErrorNewPassword"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/input_field_label_normal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileLabelRetypeNewPassword" />
+
+                    <EditText
+                        android:id="@+id/etRetypePassword"
+                        style="@style/input_field_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/white_text_field_drawable"
+                        android:hint="@string/profileHintRetypeNewPassword"
+                        android:inputType="textPassword"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp" />
+
+
+                    <TextView
+                        android:id="@+id/etRetypePasswordError"
+                        style="@style/input_field_label_error"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profileErrorRetypeNewPassword"
+                        android:visibility="invisible" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>

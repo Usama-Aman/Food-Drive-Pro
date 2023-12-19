@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/item_dashboard_drawable"
+        android:padding="@dimen/_5sdp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/_75sdp"
+            android:layout_height="match_parent"
+            android:background="@color/inputFieldBorderColor"
+            app:layout_constraintBottom_toBottomOf="@id/itemConstraint"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="@id/itemConstraint" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/itemConstraint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            app:layout_constraintLeft_toRightOf="@id/image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/g3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".7" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/g4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent=".5" />
+
+            <TextView
+                android:id="@+id/dateTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/inputFieldBorderColor"
+                android:drawablePadding="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_semibold"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textColor="@color/appGreenColor"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/inputFieldBorderColor"
+                android:drawablePadding="@dimen/_5sdp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/g3"
+                app:layout_constraintTop_toBottomOf="@id/dateTime" />
+
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/inputFieldBorderColor"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="@id/g4"
+                app:layout_constraintTop_toBottomOf="@id/name" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--            <View-->
+        <!--                android:layout_width="match_parent"-->
+        <!--                android:layout_height="@dimen/_1sdp"-->
+        <!--                android:layout_marginTop="@dimen/_5sdp"-->
+        <!--                android:background="@color/dividerColor"-->
+        <!--                app:layout_constraintTop_toBottomOf="@id/itemConstraint" />-->
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="ch_item_margin_frm_profile">@dimen/_5sdp</dimen>
+    <dimen name="ch_item_inner_view_margin">@dimen/_15sdp</dimen>
+    <dimen name="ch_item_inner_minus_margin">0dp</dimen>
+    <dimen name="ch_item_parent_margin">@dimen/_5sdp</dimen>
+
+
+</resources>

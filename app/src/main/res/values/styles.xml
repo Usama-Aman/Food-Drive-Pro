@@ -1,0 +1,229 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/appGreenColor</item>
+        <item name="colorPrimaryDark">@color/appGreyColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+        <item name="pinViewStyle">@style/PinWidget.PinView</item>
+        <item name="alertDialogTheme">@style/MyAlertDialogTheme</item>
+    </style>
+
+    <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <style name="NavigationDrawerStyle">
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="fontFamily">@font/poppins_regular</item>
+        <item name="colorControlHighlight">@color/transparent</item>
+        <item name="android:layout_marginTop">@dimen/_5sdp</item>
+        <item name="android:layout_marginBottom">@dimen/_5sdp</item>
+    </style>
+
+
+    <style name="input_field_label_normal">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/_9sdp</item>
+        <item name="android:textColor">@color/inputFieldLabelColor</item>
+    </style>
+
+    <style name="input_field_label_error">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+        <item name="android:textColor">@color/inputFieldBorderErrorColor</item>
+    </style>
+
+    <style name="input_field_label_green">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/_9sdp</item>
+        <item name="android:textColor">@color/appGreenColor</item>
+    </style>
+
+    <style name="btn_white">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/_14sdp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/whiteColor</item>
+    </style>
+
+    <style name="btn_green">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">@dimen/_13sdp</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textColor">@color/appGreenColor</item>
+    </style>
+
+    <style name="input_field_edit_text">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="hintTextColor">@color/inputFieldHintColor</item>
+        <item name="android:textColor">@color/inputFieldTextColor</item>
+    </style>
+
+    <style name="big_size_black_labels">
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">@dimen/_15sdp</item>
+        <item name="android:textColor">@color/bigSizeLabelColor</item>
+    </style>
+
+    <style name="normal_black_label">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">@dimen/_12sdp</item>
+        <item name="android:textColor">@color/bigSizeLabelColor</item>
+    </style>
+
+    <style name="MyAlertDialogTheme" parent="@android:style/Theme.Material.Light.Dialog.Alert">
+        <item name="android:textAppearanceSmall">@style/MyTextAppearance</item>
+        <item name="android:textAppearanceMedium">@style/MyTextAppearance</item>
+        <item name="android:textAppearanceLarge">@style/MyTextAppearance</item>
+    </style>
+
+    <style name="NegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/appGreenColor</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/appGreenColor</item>
+    </style>
+
+    <style name="MyTextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+
+    <!--Chat Styles-->
+
+    <!--    // Chat Styles-->
+
+    <style name="chatItemParentBg">
+        <item name="android:layout_weight">1.4</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="chatItemAudioBgGreenRight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_50sdp</item>
+        <item name="android:layout_marginLeft">@dimen/ch_item_inner_view_margin</item>
+        <item name="android:layout_marginRight">@dimen/ch_item_inner_minus_margin</item>
+        <item name="android:background">@drawable/bg_chat_item_rounded_green_right</item>
+    </style>
+
+    <style name="chatItemAudioBgGreenLeft">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_50sdp</item>
+        <item name="android:layout_marginRight">@dimen/ch_item_inner_view_margin</item>
+        <item name="android:layout_marginLeft">@dimen/ch_item_inner_minus_margin</item>
+        <item name="android:background">@drawable/bg_chat_item_rounded_green_left</item>
+    </style>
+
+
+    // Styles For Video And Audio
+
+    <style name="chatItemBgGreenRight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_150sdp</item>
+        <item name="android:layout_marginLeft">@dimen/ch_item_inner_view_margin</item>
+        <item name="android:layout_marginRight">@dimen/ch_item_inner_minus_margin</item>
+        <item name="android:background">@drawable/bg_chat_item_rounded_green_right</item>
+    </style>
+
+    <style name="chatItemBgGreenLeft">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_150sdp</item>
+        <item name="android:layout_marginRight">@dimen/ch_item_inner_view_margin</item>
+        <item name="android:layout_marginLeft">@dimen/ch_item_inner_minus_margin</item>
+        <item name="android:background">@drawable/bg_chat_item_rounded_green_left</item>
+    </style>
+
+
+    <style name="chatItemBgGrayRight">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_150sdp</item>
+        <item name="android:layout_marginLeft">@dimen/ch_item_inner_view_margin</item>
+        <item name="android:layout_marginRight">@dimen/ch_item_inner_minus_margin</item>
+        <item name="android:background">@drawable/bg_chat_item_rounded_gray_right</item>
+    </style>
+
+    <style name="chatItemBgGrayLeft">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_150sdp</item>
+        <item name="android:layout_marginLeft">@dimen/ch_item_inner_minus_margin</item>
+        <item name="android:layout_marginRight">@dimen/ch_item_inner_view_margin</item>
+        <item name="android:background">@drawable/bg_chat_item_rounded_gray_left</item>
+    </style>
+
+    <style name="chatItemMsgBgGrayLeft">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">@dimen/ch_item_inner_view_margin</item>
+
+        <item name="android:background">@drawable/bg_chat_item_rounded_gray_left</item>
+    </style>
+
+    <style name="chatItemMsgBgGreenRight">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/ch_item_inner_view_margin</item>
+        <item name="android:layout_marginRight">@dimen/ch_item_inner_minus_margin</item>
+        <item name="android:background">@drawable/bg_chat_item_rounded_green_right</item>
+    </style>
+
+    <style name="chatItemMsgBgGreenRightDelete">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">@dimen/ch_item_inner_view_margin</item>
+        <item name="android:layout_marginRight">@dimen/ch_item_inner_minus_margin</item>
+        <item name="android:background">@drawable/bg_chat_item_rounded_red_right</item>
+    </style>
+
+
+    <style name="chatItemBgGrayLeftImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_150sdp</item>
+
+        <item name="android:layout_marginRight">@dimen/ch_item_inner_view_margin</item>
+        <item name="android:background">@drawable/bg_chat_item_rounded_gray_left_image</item>
+    </style>
+
+    <style name="chatItemBgGrayLeftImageDonate">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_150sdp</item>
+        <item name="android:background">@drawable/bg_chat_item_rounded_gray_left_image</item>
+    </style>
+
+
+    <style name="chatItemBgGreenRightImage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_150sdp</item>
+        <item name="android:layout_marginLeft">@dimen/ch_item_inner_view_margin</item>
+
+        <item name="android:background">@drawable/bg_chat_item_rounded_green_right_image</item>
+    </style>
+
+    <style name="chatItemBgGreenRightImageDelete">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_150sdp</item>
+        <item name="android:layout_marginLeft">@dimen/ch_item_inner_view_margin</item>
+
+        <item name="android:background">@drawable/bg_chat_item_rounded_red_right</item>
+    </style>
+
+    <style name="PopupAnimation">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:windowExitAnimation">@android:anim/fade_out</item>
+    </style>
+
+</resources>

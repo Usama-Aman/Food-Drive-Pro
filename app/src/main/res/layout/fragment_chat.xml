@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+
+    <RelativeLayout
+        android:id="@+id/rlBody"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomConstraint">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMessages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:nestedScrollingEnabled="true"
+            android:paddingBottom="@dimen/_10sdp" />
+
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/bottomConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/rlFooter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/_15sdp"
+            android:background="@color/gray_chat_bg"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/rlMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@color/gray_chat_bg"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <com.vanniktech.emoji.EmojiEditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/rlMessageButtons"
+                    android:layout_weight="1.3"
+                    android:background="@drawable/bg_white_with_gray_border"
+                    android:ems="10"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="@string/chatLabelTypeYourMessage"
+                    android:imeOptions="actionSend|flagNoEnterAction"
+                    android:inputType="textShortMessage|textAutoCorrect|textCapSentences|textMultiLine"
+                    android:lines="5"
+                    android:maxLines="5"
+                    android:minLines="1"
+                    android:paddingLeft="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingRight="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_8sdp"
+                    android:scrollbars="vertical"
+                    android:scrollHorizontally="false"
+                    android:textColor="@color/black_light_shade"
+                    android:textColorHint="@color/gray_hint"
+                    android:textSize="@dimen/_11sdp" />
+
+                <LinearLayout
+                    android:id="@+id/rlMessageButtons"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right|bottom"
+                    android:layout_weight="0.7"
+                    android:weightSum="3">
+
+
+                    <RelativeLayout
+                        android:id="@+id/rlEmoji"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/rlGalley"
+
+                        android:layout_weight="1"
+                        android:gravity="center|bottom"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/btEmoji"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_19sdp"
+                            android:background="@drawable/ic_emoji_chat" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlGalley"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_toLeftOf="@+id/rlSendMsg"
+                        android:layout_weight="1"
+                        android:gravity="center|bottom"
+                        android:paddingBottom="@dimen/_8sdp">
+
+                        <ImageView
+                            android:id="@+id/ivGallery"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:layout_centerInParent="true"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:background="@drawable/ic_img_chat" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlSendMsg"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right|bottom"
+                        android:layout_weight="1"
+                        android:gravity="center|bottom"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/btSend"
+                            android:layout_width="@dimen/_18sdp"
+                            android:layout_height="@dimen/_18sdp"
+                            android:background="@drawable/ic_send_chat" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/iRemove"
+            layout="@layout/layout_remove_chat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_66sdp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</RelativeLayout>

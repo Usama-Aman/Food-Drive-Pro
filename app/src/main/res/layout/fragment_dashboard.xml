@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appGreyColor">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <RadioButton
+        android:id="@+id/donationRadioButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/appGreyColor"
+        android:button="@color/transparent"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="@string/dashboardLabelDonation"
+        android:textAlignment="center"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/g2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/g1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <RadioButton
+        android:id="@+id/moneyRadioButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/appGreyColor"
+        android:button="@color/transparent"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:text="@string/dashboardLabelMoney"
+        android:textAlignment="center"
+        android:textSize="@dimen/_14sdp"
+        app:layout_constraintBottom_toBottomOf="@id/g2"
+        app:layout_constraintLeft_toRightOf="@id/g1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/g2"
+        app:shimmer_repeat_mode="restart">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:orientation="vertical">
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+            <include layout="@layout/shimmer_layout" />
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/g2">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dashbooardRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tvNoData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:fontFamily="@font/poppins_regular"
+        android:gravity="center"
+        android:paddingLeft="@dimen/_20sdp"
+        android:paddingRight="@dimen/_20sdp"
+        android:text="@string/dashboardLabelNoDonations"
+        android:textColor="@color/headingsAndSimpTextColor"
+        android:textSize="@dimen/_14sdp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "1063773915984",
+    "firebase_url": "https://thefooddrive-183cc.firebaseio.com",
+    "project_id": "thefooddrive-183cc",
+    "storage_bucket": "thefooddrive-183cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063773915984:android:5ab748d8271bc090e8fa55",
+        "android_client_info": {
+          "package_name": "com.elementary.thefooddrive"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063773915984-s1d4cmpjjctei5s6ef1aptbu35frn11f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhWognhUQqM0WPCrQP9MBqVB2pA6fKpD8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063773915984-s1d4cmpjjctei5s6ef1aptbu35frn11f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1063773915984-rhn1jnp0jbhtteef5f3nc8gl7cqr9rkf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.elementary.thefooddrive",
+                "app_store_id": "1523675955"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063773915984:android:fdd8eadc01c272f9e8fa55",
+        "android_client_info": {
+          "package_name": "com.elementary.thefooddrivepro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063773915984-s1d4cmpjjctei5s6ef1aptbu35frn11f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhWognhUQqM0WPCrQP9MBqVB2pA6fKpD8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063773915984-s1d4cmpjjctei5s6ef1aptbu35frn11f.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1063773915984-rhn1jnp0jbhtteef5f3nc8gl7cqr9rkf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.elementary.thefooddrive",
+                "app_store_id": "1523675955"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

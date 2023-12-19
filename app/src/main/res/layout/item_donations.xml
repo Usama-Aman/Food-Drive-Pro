@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.daimajia.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/whiteColor"
+    app:dragEdge="right"
+    app:mode="same_level">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/sToRight"
+        android:layout_height="@dimen/_100sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/pickedLayout"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:background="@color/appGreenColor">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@drawable/ic_picked"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/dashboardSwipeLabelPicked"
+                    android:textAlignment="center"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/_8sdp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/chatLayout"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="match_parent"
+                android:background="@color/inputFieldTextColor">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:drawableTop="@drawable/ic_chat"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="@string/dashboardSwipeLabelChat"
+                    android:textAlignment="center"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/_8sdp" />
+
+            </RelativeLayout>
+
+
+            <!--            <RelativeLayout-->
+            <!--                android:layout_width="@dimen/_50sdp"-->
+            <!--                android:layout_height="match_parent"-->
+            <!--                android:background="@color/appGreyColor">-->
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_centerInParent="true"-->
+            <!--                    android:drawableTop="@drawable/ic_delete"-->
+            <!--                    android:drawablePadding="@dimen/_5sdp"-->
+            <!--                    android:fontFamily="@font/poppins_regular"-->
+            <!--                    android:text="@string/dashboardSwipeLabelDelete"-->
+            <!--                    android:textSize="@dimen/_8sdp"-->
+            <!--                    android:textAlignment="center"-->
+            <!--                    android:textColor="@color/inputFieldBorderErrorColor" />-->
+
+            <!--            </RelativeLayout>-->
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/itemMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:background="@drawable/item_dashboard_drawable"
+        android:padding="@dimen/_5sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/whiteColor">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="@dimen/_75sdp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_logo_inner"
+                app:layout_constraintBottom_toBottomOf="@id/itemConstraint"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/itemConstraint" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/itemConstraint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_7sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/image"
+                app:layout_constraintRight_toLeftOf="@id/menuIcon"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/dateTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_regular"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textColor="@color/appGreenColor"
+                    android:textSize="@dimen/_12sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_user_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textColor="@color/bigSizeLabelColor"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dateTime" />
+
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_pin_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textColor="@color/inputFieldLabelColor"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/name" />
+
+
+                <TextView
+                    android:id="@+id/number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_mobile_icon"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_regular"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:textColor="@color/inputFieldLabelColor"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/address" />
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@color/itemStatusBlueColor"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/poppins_regular"
+                    android:maxLines="1"
+                    android:minLines="1"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingEnd="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:textAlignment="center"
+                    android:textColor="@color/whiteColor"
+                    android:textSize="@dimen/_9sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/number" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/menuIcon"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:src="@drawable/ic_swp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--            <View-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="@dimen/_1sdp"-->
+            <!--                android:layout_marginTop="@dimen/_5sdp"-->
+            <!--                android:background="@color/dividerColor"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/itemConstraint" />-->
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </LinearLayout>
+
+
+</com.daimajia.swipe.SwipeLayout>

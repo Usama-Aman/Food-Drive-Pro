@@ -1,0 +1,132 @@
+<resources>
+
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">AIzaSyAald9D0wdy86pmbTX1vWc9KMc-FXx3wzQ</string>
+    <string name="default_notification_channel_id" translatable="false">1</string>
+
+    <string name="app_name">Food Drive Pro</string>
+    <string name="back_pressed_again">Please click BACK again to exit</string>
+    <string name="toastSuccessTitle">Success</string>
+    <string name="toastErrorTitle">Error!</string>
+    <string name="turnOnLocation">Please Turn on your Location</string>
+    <string name="locationPermissionDenied">Permission Denied.</string>
+    <string name="no_internet" translatable="false">Please check your internet connection, you seems to be offline</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="error_something_went_wrong">Sorry, something went wrong</string>
+    <string name="permissionNotGranted">Please grant permission</string>
+
+    <!--Splash Screen -->
+    <string name="txt_splash" translatable="false">Aenean bibendum, nunc et egestas \nult sit amet hendrerit nisi sapien eget</string>
+
+
+    <!--Login Screen-->
+    <string name="loginLabelEmail">Email Address</string>
+    <string name="loginLabelPassword">Password</string>
+    <string name="loginHintEmail">email@address.com</string>
+    <string name="loginHintPassword">••••••••</string>
+    <string name="loginLabelForgotPassword">Forgot your Password?</string>
+    <string name="loginBtnLogin">Login</string>
+    <string name="loginErrorEmailRequired">Email address is required</string>
+    <string name="loginErrorPasswordRequired">Password is required</string>
+
+    <!--Forgot Password Screen-->
+    <string name="fpLabelEmail">Email Address</string>
+    <string name="fpHintEmail">email@address.com</string>
+    <string name="fpBtnNext">Next</string>
+    <string name="fpLabelForgotYourPassword">Forgot Your Password?</string>
+    <string name="fpLabelEnterEmail">Please enter your email you used at the time of registration to get the password reset instructions.</string>
+    <string name="fpErrorEmailRequired">Email address is required</string>
+
+
+    <!--OTP Screen-->
+    <string name="otpLabelCheckEmail">Check Your Mail!</string>
+    <string name="otpLabelEmailInstructions">We just email you with the instructions \n to reset your password</string>
+    <string name="otpLabelDidntReceiveCode">Didn\'t receive the code?</string>
+    <string name="otpLabelResendEmail">Resend Email</string>
+    <string name="otpLabelOtpRequired">OTP is required</string>
+    <string name="otpErrorEmailSent">We have sent a new code on your email</string>
+
+
+    <!--Reset Screen-->
+    <string name="resetLabelResetPassword">Reset Your Password</string>
+    <string name="resetLabelTypeNewPassword">Type your new password</string>
+    <string name="resetLabelNewPassword">New Password</string>
+    <string name="resetLabelRetypeNewPassword">Retype New Password</string>
+    <string name="resetErrorPasswordRequired">Password is required</string>
+    <string name="resetErrorPasswordLength">Password length should be minimum 8 characters</string>
+    <string name="resetErrorConfirmPasswordRequired">Please retype password</string>
+    <string name="resetErrorPasswordMatch">Passwords are not same</string>
+
+
+    <!--DashBoard Screen-->
+    <string name="dashboardLabelDonation">Donation</string>
+    <string name="dashboardLabelMoney">Money</string>
+    <string name="menuLabelDashboard">Dashboard</string>
+    <string name="menuLabelEditProfile">Edit Profile</string>
+    <string name="menuLabelLogout">Logout</string>
+    <string name="dashboardSwipeLabelChat">Chat</string>
+    <string name="dashboardSwipeLabelDelete">Delete</string>
+    <string name="dashboardSwipeLabelPicked">Picked</string>
+    <string name="dashboardLabelNoDonations">No items available</string>
+    <string name="dashboardDialogLabelPickedItem">Are you sure you want to mark this donation as picked?</string>
+    <string name="dashboardDialogLabelReceiveMoney">Are you sure you have received donation?</string>
+    <string name="dashboardErrorDonationPicked">Donation has been picked successfully</string>
+    <string name="dashboardErrorDonationReceived">Donation has been received successfully</string>
+
+    <!--Profile Screen-->
+    <string name="profileScreenTitle">My Profile</string>
+    <string name="profileBtnSave">Save</string>
+    <string name="profileLabelFirstName">First Name</string>
+    <string name="profileLabelLastName">Last Name</string>
+    <string name="profileLabelPhone">Phone</string>
+    <string name="profileLabelEmail">Email</string>
+    <string name="profileLabelChangePassword">Change Password</string>
+    <string name="profileLabelOldPassword">Old Password</string>
+    <string name="profileLabelNewPassword">New Password</string>
+    <string name="profileLabelRetypeNewPassword">Retype New Password</string>
+    <string name="profileHintFirstName">First name</string>
+    <string name="profileHintLastName">Last name</string>
+    <string name="profileHintPhone">3001212121</string>
+    <string name="profileHintEmail">email@address.com</string>
+    <string name="profileHintChangePassword">Change Password</string>
+    <string name="profileHintOldPassword">Type your old password</string>
+    <string name="profileHintNewPassword">Enter new password</string>
+    <string name="profileHintRetypeNewPassword">Retype new password</string>
+    <string name="profileErrorFirstName">First name is required</string>
+    <string name="profileErrorLastName">Last name is required</string>
+    <string name="profileErrorPhone">Phone number is required</string>
+    <string name="profileErrorEmail">Email address is required</string>
+    <string name="profileErrorChangePassword">Change Password</string>
+    <string name="profileErrorOldPassword">Old password is required</string>
+    <string name="profileErrorNewPassword">New password is required</string>
+    <string name="profileErrorRetypeNewPassword">Please retype new password</string>
+    <string name="profileErrorPasswordEmpty">Fields can not be empty</string>
+    <string name="profileErrorPasswordMatch">Passwords are not same</string>
+
+    <!--Money Detail Screen -->
+    <string name="moneyDetailLabelType">Type</string>
+    <string name="moneyDetailLabelPickDateTime">Pickup Date &amp; Time</string>
+    <string name="moneyDetailLabelPickUpAddress">Pickup Address</string>
+    <string name="moneyDetailLabelNotes">Notes</string>
+    <string name="moneyDetailBtnBack">Back</string>
+
+
+    <!--Donation Detail Screen-->
+    <string name="donationDetailLabelDonationType">Donation Type</string>
+    <string name="donationDetailLabelQuantity">Quantity</string>
+    <string name="donationDetailLabelPhone">Phone Number</string>
+    <string name="donationDetailLabelPickDateTime">Pickup Date &amp; Time</string>
+    <string name="donationDetailLabelPickUpAddress">Pickup Address</string>
+    <string name="donationDetailLabelNotes">Notes</string>
+    <string name="donationDetailBtnBack">Back</string>
+
+    <!--Chat Strings-->
+    <string name="chatScreenTitle">Messages</string>
+    <string name="chatBtnBack">Back</string>
+    <string name="chatLabelTypeYourMessage">Type your message</string>
+    <string name="chatBtnDeleteMessageYes">No</string>
+    <string name="chatBtnDeleteMessageNo">Yes</string>
+    <string name="galleryScreenTitle">Media</string>
+
+
+</resources>

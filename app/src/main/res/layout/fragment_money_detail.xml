@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteColor">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_20sdp">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gstart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".04" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".96" />
+
+
+        <TextView
+            android:id="@+id/tvMoney"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_centerInParent="true"
+            android:background="@color/appGreenColor"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/whiteColor"
+            android:textSize="@dimen/_18sdp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/typeCons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/gstart"
+            app:layout_constraintRight_toRightOf="@id/gend"
+            app:layout_constraintTop_toBottomOf="@id/tvMoney">
+
+            <View
+                android:id="@+id/v"
+                android:layout_width="1dp"
+                android:layout_height="0dp"
+                android:background="@color/dividerColor"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/v"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/typeLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/moneyDetailLabelType"
+                    android:textColor="@color/bigSizeLabelColor"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/input_field_label_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDonationType"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:text="lorem ipsum"
+                    app:layout_constraintTop_toBottomOf="@id/typeLabel" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/_5sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/v"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/pickUpLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
+                    android:text="@string/moneyDetailLabelPickDateTime"
+                    android:textColor="@color/bigSizeLabelColor"
+                    android:textSize="@dimen/_10sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvDonationPickUpTime"
+                    style="@style/input_field_label_normal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:textAllCaps="true"
+                    app:layout_constraintTop_toBottomOf="@id/pickUpLabel" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/v2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/dividerColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/typeCons" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/phoneConstraint"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="@id/gstart"
+            app:layout_constraintRight_toRightOf="@id/gend"
+            app:layout_constraintTop_toBottomOf="@id/v2">
+
+
+            <TextView
+                android:id="@+id/phoneLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/donationDetailLabelPhone"
+                android:textColor="@color/bigSizeLabelColor"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDonorPhoneNo"
+                style="@style/input_field_label_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:drawableLeft="@drawable/ic_mobile_icon"
+                android:drawablePadding="@dimen/_5sdp"
+                android:textColor="@color/appGreenColor"
+                app:layout_constraintTop_toBottomOf="@id/phoneLabel" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:id="@+id/v4"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/dividerColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneConstraint" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="@id/gstart"
+            android:id="@+id/locationConstraint"
+            app:layout_constraintRight_toRightOf="@id/gend"
+            app:layout_constraintTop_toBottomOf="@id/v4">
+
+
+            <TextView
+                android:id="@+id/pickAddressLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/moneyDetailLabelPickUpAddress"
+                android:textColor="@color/bigSizeLabelColor"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvDonationPickUpAddress"
+                style="@style/input_field_label_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:drawableLeft="@drawable/ic_pin_icon"
+                android:drawablePadding="@dimen/_5sdp"
+                android:textColor="@color/appGreenColor"
+                app:layout_constraintTop_toBottomOf="@id/pickAddressLabel" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <View
+            android:id="@+id/v3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@color/dividerColor"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/locationConstraint" />
+
+        <TextView
+            android:id="@+id/notesLable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/moneyDetailLabelNotes"
+            android:textColor="@color/bigSizeLabelColor"
+            android:textSize="@dimen/_10sdp"
+            app:layout_constraintLeft_toLeftOf="@id/gstart"
+            app:layout_constraintRight_toRightOf="@id/gend"
+            app:layout_constraintTop_toBottomOf="@id/v3" />
+
+        <TextView
+            android:id="@+id/tvDonationNote"
+            style="@style/input_field_label_normal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_1sdp"
+            app:layout_constraintLeft_toLeftOf="@id/gstart"
+            app:layout_constraintRight_toRightOf="@id/gend"
+            app:layout_constraintTop_toBottomOf="@id/notesLable" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

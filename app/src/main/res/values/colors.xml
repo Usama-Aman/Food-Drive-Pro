@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#41b649</color>
+    <color name="colorPrimaryDark">#41b649</color>
+    <color name="colorAccent">#41b649</color>
+
+    <color name="colorPrimaryPix">#41b649</color>
+    <color name="colorPrimaryLightPix">#41b649</color>
+
+    <color name="whiteColor">#ffffff</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="blackColor">#000000</color>
+
+    <color name="appGreyColor">#f4f4f6</color>
+    <color name="appGreenColor">#41b649</color>
+
+    <color name="inputFieldLabelColor">#686868</color>
+    <color name="inputFieldTextColor">#444444</color>
+    <color name="inputFieldHintColor">#b9b9b9</color>
+    <color name="inputFieldBorderColor">#e6e6e7</color>
+    <color name="inputFieldBorderErrorColor">#d32e2e</color>
+    <color name="errorColor">#FF5B41</color>
+    <color name="bigSizeLabelColor">#101010</color>
+
+    <color name="itemStatusBlueColor">#418ab7</color>
+
+    <color name="dividerColor">#e8e8e8</color>
+
+
+    <!-- ______________________ chat Colors ________________________-->
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="red">#FF0000</color>
+    <color name="headingsAndSimpTextColor">#5E5E5E</color>
+    <color name="gray_dark">#98999b</color>
+    <color name="color_rounded_corner_gray">#E4E4E4</color>
+    <color name="charcoal_light">#101010</color>
+    <color name="black1">#121212</color>
+    <color name="colorStatusBar">#F5F5F5</color>
+    <color name="outlineColorFields">#e6e6e7</color>
+    <color name="placeholder">#b9b9b9</color>
+    <color name="fieldsColor">#101010</color>
+    <color name="pin_normal">#6B767E</color>
+    <color name="greyText">#7f7f7f</color>
+    <color name="fieldsHeading">#686868</color>
+    <color name="error">#FF5B41</color>
+    <color name="placeholder_bg">#dddddd</color>
+    <color name="bgGrey">#EEEEEE</color>
+    <color name="bgCharcoal">#454545</color>
+    <color name="gray_more_lighter">#eaeaea</color>
+    <color name="statusbarcolor">#F5F5F7</color>
+    <color name="linecolor">#b4b6b4</color>
+    <color name="gray_chat_bg">#e6e6e6</color>
+    <color name="black_light_shade">#060606</color>
+    <color name="gray_hint">#c7c7cc</color>
+    <color name="gray_light">#eeeeee</color>
+    <color name="roundedBottomSheetPrimaryBackground">#FFFFFFFF</color>
+    <color name="roundedBottomSheetPrimaryNavigationBarColor">#FFFFFFFF</color>
+    <color name="light_red">#e8d8d9</color>
+
+
+</resources>
